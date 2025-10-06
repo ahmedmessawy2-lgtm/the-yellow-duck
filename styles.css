@@ -76,3 +76,15 @@ body{
 @media (min-width:640px){
   .fields{grid-template-columns:1fr 1fr}
 }
+.photo {
+  text-align: center;
+  margin: 10px 0 15px;
+}
+.photo img {
+  display: none; /* hidden unless ?photo= is given */
+  max-width: 200px;
+  border-radius: 12px;
+  border: 3px solid #ffd700;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  background: #fff;
+}
