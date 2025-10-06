@@ -1,0 +1,78 @@
+/* Halloween theme for The Yellow Duck guest pass */
+:root{
+  --card-bg: #fff8f1;
+  --ink: #190e03;
+  --accent: #ffb703;
+  --accent-2: #fb5607;
+  --shadow: rgba(0,0,0,0.25);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--ink);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  overflow-x:hidden;
+}
+
+.bg{position:fixed; inset:0; z-index:-1}
+.bg-svg{width:100%; height:100%}
+
+.site-header{
+  display:flex; justify-content:center; padding:20px 16px;
+}
+.brand{
+  display:flex; align-items:center; gap:12px;
+  background: rgba(255,255,255,0.12);
+  border:1px solid rgba(0,0,0,0.08);
+  backdrop-filter: blur(2px);
+  padding:10px 14px; border-radius:12px;
+  box-shadow: 0 6px 18px var(--shadow);
+}
+.duck{font-size:32px; filter: drop-shadow(0 1px 0 #00000022)}
+.brand-top{
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: 1px;
+  font-size: 20px;
+  line-height: 1;
+}
+.brand-sub{
+  font-weight:600; font-size:12px; opacity:.9; margin-top:4px;
+}
+
+.card{
+  width:min(720px, 92vw);
+  margin: 24px auto 28px;
+  background: var(--card-bg);
+  border-radius: 18px;
+  border:2px dashed #3a1a04;
+  padding: 22px 22px 18px;
+  box-shadow: 0 10px 24px var(--shadow);
+}
+.card h1{
+  font-family: "Luckiest Guy", cursive;
+  margin:0 0 6px; letter-spacing:0.5px;
+  font-size: clamp(26px, 4.6vw, 38px);
+}
+.hint{margin:0 0 14px; opacity:.8; font-weight:600}
+
+.fields{display:grid; grid-template-columns:1fr; gap:10px; margin-top:8px}
+.field{
+  display:flex; justify-content:space-between; align-items:center;
+  background:#fff; border-radius:12px; padding:14px 16px; border:1px solid #00000012;
+  box-shadow: inset 0 0 0 1px #00000008;
+}
+.field .label{font-weight:800; text-transform:uppercase; letter-spacing:.3px; color:#3a1a04}
+.field span:last-child{font-weight:700}
+
+.footer-note{margin-top:14px; font-size:13px; opacity:.75}
+
+.site-footer{
+  display:flex; flex-direction:column; align-items:center;
+  gap:6px; padding-bottom:24px; color:#2b1403; text-shadow:0 1px 0 #ffffff66;
+}
+.spooky{font-size:20px}
+@media (min-width:640px){
+  .fields{grid-template-columns:1fr 1fr}
+}

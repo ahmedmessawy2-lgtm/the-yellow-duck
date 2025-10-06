@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Yellow Duck — Guest Pass</title>
+  <meta name="description" content="Guest pass viewer for The Yellow Duck events">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg">
+    <!-- Decorative SVG background with bats, webs, pumpkins -->
+    <svg class="bg-svg" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FF9D00"/>
+          <stop offset="100%" stop-color="#FF5A00"/>
+        </linearGradient>
+        <pattern id="pumpkins" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+          <g opacity="0.06">
+            <circle cx="60" cy="60" r="26" fill="#000"/>
+            <rect x="56" y="27" width="8" height="10" rx="2" fill="#000"/>
+          </g>
+        </pattern>
+      </defs>
+      <rect x="0" y="0" width="1440" height="900" fill="url(#grad)"/>
+      <rect x="0" y="0" width="1440" height="900" fill="url(#pumpkins)"/>
+      <!-- Simple bats -->
+      <g class="bats" fill="#1b0e02" opacity="0.22">
+        <path d="M100 140c15-20 35-20 50 0-10-5-18-5-25 0-7-5-15-5-25 0z"/>
+        <path d="M350 80c18-22 38-22 56 0-12-6-20-6-28 0-8-6-16-6-28 0z"/>
+        <path d="M680 160c20-24 44-24 64 0-14-6-22-6-32 0-10-6-18-6-32 0z"/>
+        <path d="M1100 110c18-22 38-22 56 0-12-6-20-6-28 0-8-6-16-6-28 0z"/>
+      </g>
+      <!-- Ground silhouettes -->
+      <path d="M0,860 C200,790 400,890 600,840 C820,780 1040,900 1440,820 L1440,900 L0,900Z" fill="#3a1a04" opacity="0.6"/>
+      <path d="M0,890 C250,840 500,900 800,870 C1000,850 1200,900 1440,860 L1440,900 L0,900Z" fill="#2b1403" opacity="0.8"/>
+    </svg>
+  </div>
+
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <div class="duck">🦆</div>
+      <div class="brand-text">
+        <div class="brand-top">THE YELLOW DUCK</div>
+        <div class="brand-sub">Halloween Night</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="card" role="main" aria-labelledby="pass-title">
+    <h1 id="pass-title">Guest Pass</h1>
+    <p class="hint">Scan shows your entry info.</p>
+    <div class="fields">
+      <div class="field"><span class="label">Name</span><span id="name">—</span></div>
+      <div class="field"><span class="label">ID</span><span id="id">—</span></div>
+      <div class="field"><span class="label">Phone</span><span id="phone">—</span></div>
+      <div class="field"><span class="label">Code</span><span id="code">—</span></div>
+    </div>
+
+    <div class="footer-note">
+      If any detail is wrong, contact staff.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="spooky">👻 🎃 🕸️ 🦇</div>
+    <div class="copyright">© <span id="year"></span> The Yellow Duck</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
